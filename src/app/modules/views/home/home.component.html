@@ -63,11 +63,10 @@
           </div>
         </div>
 
-        <div class="card-container">
-          <app-product-card ></app-product-card>
-          <app-product-card></app-product-card>
-          <app-product-card></app-product-card>
-          <app-product-card></app-product-card>
+        <div class="buy-section">
+          <div class="card-container">
+            <app-product-card *ngFor="let item of items"></app-product-card>
+          </div>
         </div>
      </div>
 
