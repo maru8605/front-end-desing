@@ -288,10 +288,8 @@ export class NavbarComponent {
             'APB Reloaded',
           ],
         },
-       
       ],
     },
-    
   ];
 
   accordionToggle(item: any) {
@@ -299,12 +297,13 @@ export class NavbarComponent {
   }
 
   toggleMenu(event: Event) {
-    console.log(event);
-    const menu = event.target as HTMLElement;
-    console.log(menu);
-    //menu.classList.toggle('is-active');
-    document.querySelector('.menuppal')?.classList.toggle('is_active');
-    console.log(document.querySelector('.menuppal'));
+    const menu = document.querySelector('.menuppal');
+    const target = event.target as HTMLElement;
+
+    if (target.closest('.hamburger') || target.closest('#close-btn')) {
+      menu?.classList.toggle('is_active');
+    }
+
     event.preventDefault();
   }
 }
