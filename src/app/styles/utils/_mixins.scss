@@ -1,0 +1,18 @@
+@use './setting' as setting;
+
+@mixin mobile {
+    @media (min-width: map-get(setting.$breakPoints, s)) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: map-get(setting.$breakPoints, md)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: map-get(setting.$breakPoints, xl)) {
+        @content;
+    }
+}

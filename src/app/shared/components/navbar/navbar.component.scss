@@ -1,0 +1,308 @@
+@import '../../../styles/styles.scss';
+
+.navbar {
+    background: $primary-blue;
+    border-bottom: 1px solid $primary-blue;
+    min-height: 72px;
+    padding: 0 12px;
+    transition: background-color .5s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &--logo {
+      display: inherit;
+
+      .menu-mobile{
+        display: flex;
+        align-items: center;
+
+        @include desktop {
+          display: none;
+        }
+      }
+      
+      .hamburger{
+        background-color:transparent;
+        left:0;
+        top:0;
+        padding: 0 16px;
+        z-index:99;
+        cursor:pointer;
+        user-select:none
+      }
+      .hamburger.is-active{
+        background-color:$primary-text;
+      }
+      .layer{
+        background:#ffffff8c;
+        margin-bottom:4px;
+        border-radius:1px;
+        width:22px;
+        height:2px;
+        opacity:1;
+        -webkit-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
+        -webkit-transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+      }
+
+
+      .menuppal.is_active{
+        transform: translate3d(0px, 0px, 0px);
+      }
+      .menuppal{
+        background-color: $dark-blue;
+          bottom: 0;
+          height: 100%;
+          left: 0;
+          overflow-y: scroll;
+          position: fixed;
+          top: 0;
+          transform: translate3d(-100%, 0px, 0px);
+          transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+          width: 100%;
+          z-index: 1001;
+
+          
+
+
+          .search{
+            padding: 14px;
+            display: flex;
+            button {
+              background-color: transparent;
+              border: none;
+              font-size: 14px;
+              color: #fefefe;
+              display: flex;
+              align-items: center;
+              width: 70px;
+              span {
+                margin-left: 10px;
+              }
+            }
+
+            .input-container {
+            position: relative;
+            width: 100%;
+            margin-right: 10px;
+          }
+
+          .input-container .icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+            
+          }
+
+            .input-container .icon img {
+              width: 20px; 
+              height: 20px;
+            }
+
+            .input-container input {
+              width: 100%;
+              padding-left: 40px; 
+              padding-right: 10px;
+              padding-top: 8px;
+              padding-bottom: 8px;
+              box-sizing: border-box;
+              background-color: #2e3444;
+              border: .5px;
+              border-radius: 4px;
+              height: 40px;
+              margin-left: 10px;
+            }
+
+            .input-container input::placeholder {
+              color: #a3a4ac;
+            }
+          }
+      }
+      .menuppal ul{
+        margin:0;padding:0;
+      }
+      .menuppal ul li { 
+        list-style: none;
+        text-align:center;
+        font-size:1.5rem;
+        line-height:3em;
+        height:3em;
+        color:rgb(255, 3, 205);
+        text-transform:none;
+        font-weight:bold;
+      }
+      .menuppal ul li a{
+        text-decoration:none;
+        color:#369;
+      }
+      .menuppal ul li a:hover{
+        text-decoration:none;
+        color:#333;
+      }
+
+
+      .logo-container {
+        padding: 10px;
+        border: none;
+
+        @include desktop {
+          border-right: 1px solid #ffffff4d;
+          padding: 0 20px 0;
+        }
+        
+        img {
+          margin-bottom: 10px;
+          max-width: 125px;
+
+          @include desktop {
+            max-width: 155px;
+          }
+        }
+
+      }
+    }
+
+    &--items {
+      display: flex;
+      justify-content: space-between;
+
+      @include desktop {
+        width: 100%;
+      }
+     
+
+      .menu-desktop {
+        display: none;
+        padding: 0 10px;
+        align-items: center;
+        @include desktop {
+          display: flex;
+        }
+        
+
+        &_options {
+          padding: 0 16px;
+          a{
+            color: $primary-text;
+            text-decoration: none;
+            display: flex;
+
+            img {
+              width: 16px;
+              padding-left: 10px;
+            }
+          }
+          
+        }
+        
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+      };
+
+      .profile {
+
+        display: flex;
+        button {
+          width: 106px;
+          height: 40px;
+          border-radius: 4px;
+          background-color: $primary-green;
+          border: none;
+
+          span {
+            color: #37384b;
+            font-size: 14px;
+            padding-right: 6px;
+          }
+
+        }
+
+        .cart {
+           padding-right: 8px;
+        }
+      }
+    }
+}
+.tab {
+    border-bottom: 2px solid #4c608533;
+    padding: 0 0 0 40px;
+    font-size: 14px;
+    height: 60px;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+}
+
+/* Visual styles */
+.accordion {
+  color: var(--theme);
+  overflow: hidden;
+}
+.tab__label,
+.tab__close {
+  display: flex;
+  color: white;
+  background: var(--theme);
+  cursor: pointer;
+}
+.tab__label {
+  justify-content: space-between;
+  padding: 20px;
+}
+.tab__label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transform: rotate(90deg);
+  transition: all 0.35s;
+}
+.tab input:checked + .tab__label::after {
+  transform: rotate(270deg);
+}
+.tab__content p {
+  margin: 0;
+  padding: 1rem;
+}
+.tab__close {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+.accordion--radio {
+  --theme: var(--secondary);
+}
+
+/* Arrow animation */
+.tab input:not(:checked) + .tab__label:hover::after {
+  animation: bounce .5s infinite;
+}
+@keyframes bounce {
+  25% {
+    transform: rotate(90deg) translate(.25rem);
+  }
+  75% {
+    transform: rotate(90deg) translate(-.25rem);
+  }
+}

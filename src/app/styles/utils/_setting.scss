@@ -1,0 +1,28 @@
+@use "sass:math";
+
+$breakPoints: (
+    // zero
+    zr: 0,
+    // mobile
+    xs: 320px,
+    // landscape
+    s: 576px,
+    // tablet
+    md: 768px,
+    // desktop
+    lg: 992px,
+    // extra desktop
+    xl: 1200px
+);
+
+//Colors
+$primary-blue: #313140;
+$secundary-blue: #353a4f;
+$action-blue: #5662d4;
+$dark-blue: #262833;
+
+$primary-green: #39e29c;
+
+$primary-text: #fefffe;
+
+

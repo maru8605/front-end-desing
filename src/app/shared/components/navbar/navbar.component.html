@@ -1,0 +1,79 @@
+<nav class="navbar">
+  <div class="navbar--logo">
+    <div (click)="toggleMenu($event)" class="menu-mobile">
+      <div class="hamburger" >
+        <div class="layer top"></div>
+        <div class="layer mid"></div>
+        <div class="layer bottom"></div>
+      </div>
+      <div class="menuppal">
+        <div class="search">
+          <button >
+            <img src="/assets/images/close-icon-v2.svg" alt="">
+            <span>close</span>
+          </button>
+
+          <div class="input-container">
+            <span class="icon">
+              <img src="/assets/images/search-icon.svg" alt="Search">
+            </span>
+            <input type="text" placeholder="Search">
+          </div>
+        </div>
+        <section class="accordion">
+          <div *ngFor="let item of items">
+            <div class="tab">
+            <input type="checkbox" name="accordion-1" id="cb2">
+            <label for="cb2" class="tab__label">{{item.title}}</label>
+            <div class="tab__content">
+              <p>Using <code>&lt;input type="checkbox"&gt;</code> allows to have several tabs open at the same time.</p>
+            </div>
+          </div>
+          </div>
+          
+        </section>
+
+
+      </div>
+    </div>
+    <div class="logo-container">
+      <img src="/assets/images/chicks-logo-large.svg" alt="">
+    </div>
+
+  </div>
+  <div class="navbar--items">
+
+    <div class="menu-desktop">
+      <div class="menu-desktop_options" *ngFor="let item of items">
+         <a href="">
+          {{item.title | uppercase}}
+          <img src="/assets/images/arrow-down.svg" alt="">
+        </a>
+      </div>
+     
+
+    </div>
+    <div class="profile">
+      <div class="menu-desktop ">
+        <div class="menu-desktop_options">
+          <a href="">
+            USD
+            <img src="/assets/images/arrow-down.svg" alt="arrow">
+          </a>
+        </div>
+        <div class="menu-desktop_options">
+          <a href="">
+            <img class="cart" src="/assets/images/cart-shopping-solid.svg" alt="cart icon">
+            CART (5)
+          </a>
+        </div>
+        
+      </div>
+
+      <button>
+        <span>SING IN</span>
+        <img src="/assets/images/profile.webp" alt="user logo">
+      </button>
+    </div>
+  </div>
+</nav>
