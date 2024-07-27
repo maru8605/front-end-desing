@@ -1,28 +1,40 @@
-# ChicksGoldFEDesign
+# Chicks Gold - Virtual Item Marketplace
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+### ⚡ 
 
-## Development server
+## Description
+Chicks Gold is a web application built using Angular that allows users to purchase virtual items. The application features a clean and intuitive user interface, making it easy for users to browse and purchase items.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+### Prerequisites
+* Node.js and npm (or yarn) installed
+* Angular CLI installed globally: `npm install -g @angular/cli`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/maru8605/front-end-desing
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Navigate to the project directory:
+* cd chicks-gold
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Install dependencies
+* npm install o yarn install
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Development server
+Start the development server:
 
-## Further help
+* ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# front-end-desing
+* Navigate to http://localhost:4200/.
+
+### Building for production
+
+* ng build
+
+
+
