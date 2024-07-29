@@ -1,7 +1,6 @@
 # Chicks Gold - Virtual Item Marketplace
 
-### ⚡ 
-
+### ⚡ [Visit the site](https://maru8605.github.io/front-end-desing/home)
 ## Description
 Chicks Gold is a web application built using Angular that allows users to purchase virtual items. The application features a clean and intuitive user interface, making it easy for users to browse and purchase items.
 
